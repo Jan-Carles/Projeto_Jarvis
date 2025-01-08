@@ -6,7 +6,7 @@ Tudo o que o Jarvis responde foi previamente programado, incluindo as possíveis
 
 Para executar este programa, você precisará instalar alguns módulos no terminal do VS Code:  
 - pyttsx3: Para conversão de texto em fala (Text-to-Speech).  
-- speech_recognition: Para reconhecimento de voz e conversão de fala em texto.  
+- SpeechRecognition: Para reconhecimento de voz e conversão de fala em texto.  
 - PyAudio: Necessário para capturar áudio através do microfone.  
 
 Além disso, o programa utiliza outras bibliotecas para funcionalidades adicionais, algumas também precisa instalar:  
