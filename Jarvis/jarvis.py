@@ -1,7 +1,11 @@
-import pyttsx3
-import datetime
-import speech_recognition as sr
-import pause
+import pyttsx3  # Biblioteca para conversão de texto em fala (TTS - Text-to-Speech)
+import datetime  # Fornece classes para manipular datas e horas
+import speech_recognition as sr  # Biblioteca para reconhecimento de voz e conversão de fala em texto
+import pause  # Usada para pausar o código por um tempo ou até um momento específico
+import pyautogui as pa  # Permite automação de interação com a interface gráfica, como cliques e digitação
+import time  # Oferece funções relacionadas ao tempo, como atrasos e manipulação de timestamps
+import pyperclip  # Fornece suporte para copiar e colar texto usando a área de transferência do sistema
+
 
 # Inicializa o TTS
 texto_fala = pyttsx3.init()
@@ -84,6 +88,31 @@ if __name__ == "__main__":
         if 'como' in comando:
             falar("Estou bem! Obrigado por perguntar.")
             falar("O que posso fazer para ajudá-lo?")
+        if 'abrir' in comando:
+
+            falar("Tudo bem")
+            pa.PAUSE = 1
+            pa.press('win') #pa.press é uma função para apertar ('win') é o teclado
+            pa.write('Edge') #função para escrever
+            pa.press('ENTER') #função para apertar
+            pa.write('youtube.com') #função para escrever
+            pa.press('ENTER') #função para apertar
+            time.sleep(8) #função para intervalo em segundos
+            falar("E agora? o que eu faço?")
+            continue
+        
+        if 'coloque' in comando:
+
+            falar("Você que manda!")
+            time.sleep(5)
+            pa.click(x=1032, y=123) # coordenadas para o click
+            pa.write("Black in Black")
+            pa.press('ENTER')
+            time.sleep(3)
+            pa.click(x=1157, y=322) #coordnadas para o click
+            time.sleep(5)
+            pa.press('ENTER')
+
         elif 'horas' in comando:
             tempo()
         elif 'data' in comando:
